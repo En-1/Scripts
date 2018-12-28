@@ -1,0 +1,67 @@
+C:\Users\Lubava\Desktop\Learning\ProgrammingAssignment2 
+
+git add *
+git commit -m "first commit"
+git remote add origin https://github.com/you_repository/you_project
+git push -u origin master
+
+
+
+
+
+ $ pwd
+ $ clear
+
+ $ls # file list
+ $ls - al #with details
+
+ $cd NameDir #1 lvl in depth dir 
+ $cd #home dir
+ $ cd .. #1 lvl up dir
+
+ $mkdir Name #create dir
+ $touch Name #create file
+
+ $cp FileName DirName #copy file into dir
+ $cp -r DirName1 DirName2 #copy Dir1 into Dir2
+
+ $rm FileName #remove 
+ $rm -r DirName #remove dir
+ 
+ $mv FileName DirName #move file into dir
+ $mv FileName FileNameNew #rename file
+
+ $echo #print
+ $date
+
+ $git config --global user.name "En"
+ $git config --global user.email "En-1@yandex.ru"
+ $git config --list
+
+ $ git init #initiate repo localy
+ $ git remote add origin https://github.com/En-1/Test2.git
+ $ git clone https://github.com/En-1/Test2.git
+
+ $ git add . #add new files to git for tracking (in local repo)
+ $ git add -u #track for files that were renamed or deleted
+ $ git add -A #both prev commands
+
+ $ git commit -m "" #message - description what was changed
+ $ git push # update remote version
+
+ $ git checkout -b BranchName #create a branch
+ $ git branch # see what branch you are
+ $ git checkout master #switch back to master
+
+
+
+
+
+
+
+
+
+
+
+
+
