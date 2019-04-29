@@ -32,6 +32,21 @@ lines(fitted(fit), col=2)
 plot(forecast(fit))
 CV(fit) #all measures of predictive accuracy
 
-#2 straight lines
-T<-texasgas; T$p2<-pmax(T$price-60,0)
-M5<-lm(consumption~price+p2,data = T)
+######################################################################
+
+Lahman::Teams %>% filter(yearID%in%1961:2001) %>% mutate(HRG=HR/G,RG=R/G, SBG=SB/G, BBG=BB/G) %>% 
+    ggplot(aes(BBG,RG))+geom_point(alpha=0.5)
+
+Lahman::Teams %>% filter(yearID%in%1961:2001) %>% mutate(HRG=round(HR/G,1),BBG=BB/G,RG=R/G) %>% 
+    select(HRG,BBG,RG) %>% filter(HRG<=1.2&HRG>=0.4) ->dat 
+
+get_slope<-function(x){fit=lm(RG~BBG, data = x)
+data.frame(name= names(fit$coefficients),slope=fit$coefficients, se = summary(fit)$coefficient[,2])}
+
+dat %>% group_by(HRG) %>% do(get_slope(.))
+
+library(broom); library(Lahman)
+fit<-lm(RG~BBG, data = dat); tidy(fit); glance(fit)
+dat %>% group_by(HRG) %>% do(tidy(lm(RG~BBG, data = .),conf.int = T)) %>% 
+    filter(term=="BBG") %>% select(HRG,estimate,conf.low, conf.high) %>% 
+    ggplot(aes(HRG,y = estimate, ymin=conf.low, ymax=conf.high))+geom_errorbar()+geom_point()

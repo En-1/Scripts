@@ -1,0 +1,50 @@
+1st level
+0.<!DOCTYPE html> ### 1str ### <html> </html> ### <head> </head> ### <body> </body>
+1.<h1>...</h1> ### piece of page ###<div>...</div> container ###<!--...--> comment
+2. <img src="" alt=""> ### image
+3. <a href="http://..." target="_blank">cat photos</a> ### link in new window
+4. <a href="#footer" >Jump to Bottom</a>  <b id="footer">  </b>; href=# dead link ### link cur page
+5. <p> Here's a <a href="http://..."> link to ...</a> for you to follow. </p> ### link inside text
+6. <ul>
+  <li>milk</li>
+  <li>cheese</li>
+</ul> ### unordered list
+7. <ol>
+  <li>Garfield</li>
+  <li>Sylvester</li>
+</ol> ### ordered list
+8. <form action = "..."> <input type="text" required placeholder="cat photo URL"> </form> ### text (required!) + placeholder inside form
+9. <button type="submit">Submit</button> ### add button
+10. <label for="indoor"> <input id="indoor" type="radio" name="indoor-outdoor" checked> Indoor </label>
+    <label for="outdoor"> <input id="outdoor" type="radio"
+ name="indoor-outdoor"> Outdoor 
+</label> ### buttons
+11. <label for="loving"><input id="loving" type="checkbox" name="personality"> Name</label> ### checkbox
+
+2nd level
+1. <h2 style="color: blue;"> ### <style>
+  h2 {color: blue !important;}
+</style> ### add style
+2. <style>
+ .red-text {color: red;}
+</style> <h2 class="red-text"> ### class
+3.1  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+3.2  p {
+font-size: 16px;
+ font-family: Lobster, monospace;} ### size, google font + degraded font
+4. border {
+border-color: green;
+border-width: 10px;border-style: solid; 
+border-radius: 50%;} ### border
+5. <style> #cat-form {
+  background-color: green;
+}
+</style>  <form id="cat-photo-form"> ### ID
+6. [type='checkbox'] {
+  margin: 10px 0px 15px 0px;
+}
+7. --penguin-skin: gray; ... background: var(--penguin-skin) #create/use var
+
+3rd level
+1. text-align: justify/center/left/reght; ### weight/height
+2. <strong>...</strong> ### <u>...</u> ### <em>...</em>
