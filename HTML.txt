@@ -47,4 +47,16 @@ border-radius: 50%;} ### border
 
 3rd level
 1. text-align: justify/center/left/reght; ### weight/height
-2. <strong>...</strong> ### <u>...</u> ### <em>...</em>
+2. <strong>...</strong> ### <u>...</u> ### <em>...</em> ### <s></s> ### <hr>
+3. box-shadow: 25px 10px 0px 0px blue;(x/y/blur/spred)
+4. opacity: 0.7 ### font-size: ### font-weight: ### line-height
+5. text-transform: lowercase/uppercase/capitalize/initial/inherit/none	
+6. a:hover {
+  color: blue;
+ transform: scale();}  ### cursor
+7. {position: relative/absolute/fixed (dont scroll);
+  top/bottom/r/l: 15px;} 
+8. {float: left/right;
+ width: x%;} ### z-index: 1 (overlap) ### margin: auto; (align)
+9. background: linear-gradient(35deg, red, yellow)### 
+10. transform: scale(1.1) ### transform: skewX/skewY (24deg)
